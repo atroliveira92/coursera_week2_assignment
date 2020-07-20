@@ -13,7 +13,7 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
     }
 
     private class ListIterator implements Iterator<Item> {
-        private int i = 0;
+        private int i;
         private int[] randomArray;
 
         ListIterator() {
@@ -119,11 +119,6 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
 
     // unit testing (required)
     public static void main(String[] args) {
-        int k = 3;
-        if (args.length > 0) {
-            k = Integer.parseInt(args[0]);
-        }
-
         RandomizedQueue<Integer> randomizedQueue = new RandomizedQueue<>();
 
         randomizedQueue.enqueue(0);
@@ -139,18 +134,19 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
         randomizedQueue.enqueue(8);
         randomizedQueue.enqueue(9);
 
-        System.out.println("Random dequeue: " + randomizedQueue.dequeue());
-        System.out.println("Random dequeue: " + randomizedQueue.dequeue());
+        System.out.println("Random dequeue: " + randomizedQueue.sample());
 
+        System.out.println("Random dequeue: " + randomizedQueue.dequeue());
+        System.out.println("Random dequeue: " + randomizedQueue.dequeue());
 
         System.out.println("Size " + randomizedQueue.size());
-        printValues(randomizedQueue);
-    }
-
-    private static void printValues(RandomizedQueue<Integer> randomizedQueue) {
         for (Integer i : randomizedQueue) {
             System.out.println("Item: " + i);
         }
+    }
+
+    private static void printValues(RandomizedQueue<Integer> randomizedQueue) {
+
     }
 
 }

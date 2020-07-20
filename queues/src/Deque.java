@@ -145,8 +145,6 @@ public class Deque<Item> implements Iterable<Item> {
         deque.addLast(4);
         deque.addFirst(-4);
 
-        printList(deque);
-
         System.out.println("remove first  " + deque.removeFirst());
 
         System.out.println("remove last  " + deque.removeLast());
@@ -157,20 +155,6 @@ public class Deque<Item> implements Iterable<Item> {
 
         System.out.println("remove first  " + deque.removeFirst());
 
-        System.out.println("remove last  " + deque.removeLast());
-
-        System.out.println("remove first  " + deque.removeFirst());
-
-        System.out.println("remove last  " + deque.removeLast());
-
-        System.out.println("remove first  " + deque.removeFirst());
-
-        System.out.println("remove first  " + deque.removeFirst());
-
-        printList(deque);
-    }
-
-    private static void printList(Deque<Integer> deque) {
         for (Integer i : deque) {
             System.out.println(i);
         }
